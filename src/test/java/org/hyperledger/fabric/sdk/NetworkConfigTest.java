@@ -364,8 +364,7 @@ public class NetworkConfigTest {
                 assertEquals(properties.getProperty("clientKeyFile"), "./tls/key.pem");
                 assertNull(properties.getProperty("tlsClientCertFile"));
                 assertNull(properties.getProperty("tlsClientKeyFile"));
-            }
-            else if (peer.getName().equals(peer1)) {
+            } else if (peer.getName().equals(peer1)) {
                 byte[] nodeClientKeyBytes = (byte[]) properties.get("clientKeyBytes");
                 byte[] nodeClientCertBytes = (byte[]) properties.get("clientCertBytes");
                 assertTrue(Arrays.equals(nodeClientCertBytes, "-----BEGIN CERTIFICATE----- <etc>".getBytes()));

@@ -193,13 +193,13 @@ class Endpoint {
                             throw new RuntimeException("Failed to parse TLS client key and/or cert", e);
                         }
                     } else {
-                        throw new RuntimeException(String.format("Properties %s and %s must both be set or both be null", CLIENT_KEY_FILE, CLIENT_CERT_FILE));
+                        throw new RuntimeException(String.format("Properties \"%s\" and \"%s\" must both be set or both be null", CLIENT_KEY_FILE, CLIENT_CERT_FILE));
                     }
                 } else if (properties.containsKey(CLIENT_KEY_BYTES) || properties.containsKey(CLIENT_CERT_BYTES)) {
                     ckb = (byte[]) properties.get(CLIENT_KEY_BYTES);
                     ccb = (byte[]) properties.get(CLIENT_CERT_BYTES);
                     if ((ckb == null) || (ccb == null)) {
-                        throw new RuntimeException(String.format("Properties %s and %s must both be set or both be null", CLIENT_KEY_BYTES, CLIENT_CERT_BYTES));
+                        throw new RuntimeException(String.format("Properties \"%s\" and \"%s\" must both be set or both be null", CLIENT_KEY_BYTES, CLIENT_CERT_BYTES));
                     }
                 }
 
@@ -421,13 +421,13 @@ class Endpoint {
                     throw new RuntimeException("Failed to parse TLS client key and/or cert", e);
                 }
             } else {
-                throw new RuntimeException(String.format("Properties %s and %s must both be set or both be null", CLIENT_KEY_FILE, CLIENT_CERT_FILE));
+                throw new RuntimeException(String.format("Properties \"%s\" and \"%s\" must both be set or both be null", CLIENT_KEY_FILE, CLIENT_CERT_FILE));
             }
         } else if (properties.containsKey(CLIENT_KEY_BYTES) || properties.containsKey(CLIENT_CERT_BYTES)) {
             ckb = (byte[]) properties.get(CLIENT_KEY_BYTES);
             ccb = (byte[]) properties.get(CLIENT_CERT_BYTES);
             if ((ckb == null) || (ccb == null)) {
-                throw new RuntimeException(String.format("Properties %s and %s must both be set or both be null", CLIENT_KEY_BYTES, CLIENT_CERT_BYTES));
+                throw new RuntimeException(String.format("Properties \"%s\" and \"%s\" must both be set or both be null", CLIENT_KEY_BYTES, CLIENT_CERT_BYTES));
             }
         }
 
